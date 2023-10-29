@@ -1,0 +1,15 @@
+Add Java EE and Web Tools from Eclipse MarketPlace
+
+Setup project -> New -> Web -> Dynamic Web Project
+
+Install Apache Tomcat 9 Server
+
+Install MySQL
+
+Install MySQL Connector for JAVA 8
+
+Inside main -> webapp -> create index.jsp and test run project
+
+Drag and copy mysql-connector.jar inside src -> main -> lib
+
+Add code files to webapp
