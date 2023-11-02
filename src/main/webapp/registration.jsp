@@ -15,6 +15,8 @@
 </head>
 <body>
 
+	<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+
 	<div class="main">
 
 		<!-- Sign up form -->
@@ -24,7 +26,7 @@
 					<div class="signup-form">
 						<h2 class="form-title">Sign up</h2>
 					
-						<form method="" action="" class="register-form"
+						<form method="post" action="RegistrationServlet" class="register-form"
 							id="register-form">
 							<div class="form-group">
 								<label for="name"><i
@@ -76,8 +78,18 @@
 
 	</div>
 	<!-- JS -->
-	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<!-- Sweetalert cdn link -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	
+	<script type="text/javascript">
+		var status = document.getElementById("status").value;
+		if (status == "success"){
+			swal("Success", "Account created successfuly", "success");
+		}
+	</script>
 
 
 
